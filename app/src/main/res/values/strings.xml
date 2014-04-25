@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Disco Pub Davinci</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="titulo">Disco Pub Davinci</string>
+    <string name="boton_fiestas">Sus Fiestas</string>
+    <string name="boton_gente">Su Gente</string>
+    <string name="calle">Calle Vadera s/n</string>
+    <string name="ciudad">23610 Fuensanta de Martos (Jaén)</string>
+
+
+</resources>

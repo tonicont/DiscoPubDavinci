@@ -1,0 +1,90 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/fondo"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.tonicont.davinci.FiestaActivity">
+
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/fondo">
+
+    <ImageView
+    android:layout_width="fill_parent"
+    android:layout_height="100dp"
+    android:id="@+id/img_cabecera"
+    android:layout_alignParentTop="true"
+    android:layout_centerHorizontal="true"
+    android:background="@drawable/cabecera" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:id="@+id/img_barra"
+        android:background="#000000"
+        android:layout_below="@+id/img_cabecera"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="fecha"
+        android:id="@+id/lbl_fecha"
+        android:textColor="#ffffff"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_alignBottom="@+id/img_barra"
+        android:layout_toRightOf="@+id/btn_atras"
+        android:layout_marginLeft="15dp" />
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="39dp"
+        android:id="@+id/btn_atras"
+        android:background="#000000"
+        android:layout_alignTop="@+id/img_barra"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignBottom="@+id/lbl_fecha"
+        android:src="@drawable/atras_blanco" />
+
+    <ImageView
+        android:layout_width="350dp"
+        android:layout_height="400dp"
+        android:id="@+id/img_foto"
+        android:layout_below="@+id/img_barra"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Titulo"
+        android:id="@+id/lbl_titulo"
+        android:background="#373738"
+        android:textStyle="bold"
+        android:textSize="28dp"
+        android:textColor="#ffffff"
+        android:layout_alignBottom="@+id/img_foto"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textAlignment="center"
+        android:gravity="center" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Descripcion"
+        android:id="@+id/lbl_descripcion"
+        android:background="#979797"
+        android:layout_below="@+id/img_foto"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="10dp" />
+
+</RelativeLayout>
+</ScrollView>

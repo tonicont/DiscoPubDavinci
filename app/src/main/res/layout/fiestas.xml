@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tonicont.davinci.FiestasActivity"
+    android:background="@drawable/fondo">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:id="@+id/img_cabecera"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/cabecera" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:id="@+id/img_barra"
+        android:background="#000000"
+        android:layout_below="@+id/img_cabecera"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Fiestas"
+        android:id="@+id/lbl_fiestas"
+        android:textColor="#ffffff"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_alignBottom="@+id/img_barra"
+        android:layout_toRightOf="@+id/btn_atras"
+        android:layout_marginLeft="15dp" />
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="39dp"
+        android:id="@+id/btn_atras"
+        android:layout_alignTop="@+id/img_barra"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignBottom="@+id/lbl_fiestas"
+        android:src="@drawable/atras_blanco"
+        android:background="#000000" />
+
+    <ExpandableListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/expan_fiestas"
+        android:layout_below="@+id/lbl_fiestas"
+        android:layout_centerHorizontal="true"
+        android:background="#ffffff" />
+
+</RelativeLayout>

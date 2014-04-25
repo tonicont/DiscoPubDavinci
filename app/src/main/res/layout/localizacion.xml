@@ -1,0 +1,69 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.tonicont.davinci.LocalizacionActivity"
+    android:background="@drawable/fondo">
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:id="@+id/img_cabecera"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/cabecera" />
+
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="35dp"
+        android:id="@+id/img_barra"
+        android:background="#000000"
+        android:layout_below="@+id/img_cabecera"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Localización"
+        android:id="@+id/lbl_localizacion"
+        android:textColor="#ffffff"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_alignBottom="@+id/img_barra"
+        android:layout_toRightOf="@+id/btn_atras"
+        android:layout_marginLeft="15dp" />
+
+    <ImageButton
+        android:layout_width="40dp"
+        android:layout_height="39dp"
+        android:id="@+id/btn_atras"
+        android:background="#000000"
+        android:layout_alignTop="@+id/img_barra"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignBottom="@+id/lbl_localizacion"
+        android:src="@drawable/atras_blanco" />
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="com.google.android.gms.maps.MapFragment"
+        android:layout_below="@+id/img_barra"
+
+        map:cameraTargetLat="37.64536710004887"
+        map:cameraTargetLng="-3.907343629497518"
+        map:cameraTilt="30"
+        map:cameraZoom="17"
+        map:mapType="normal"
+        map:uiCompass="false"
+        map:uiRotateGestures="true"
+        map:uiScrollGestures="true"
+        map:uiTiltGestures="true"
+        map:uiZoomControls="false"
+        map:uiZoomGestures="true"/>
+
+</RelativeLayout>
