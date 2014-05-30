@@ -59,8 +59,11 @@ public class GenteActivity extends ListActivity implements View.OnClickListener 
     public void onClick(View view) {
         switch(view.getId()){
             case R.id.btn_atras:{
+                finish();
+                /*
                 Intent i = new Intent(this,MainActivity.class);
                 startActivity(i);
+                */
             }
         }
     }
@@ -165,5 +168,9 @@ public class MiAdaptador extends BaseAdapter {
         i.putExtra("descripcion",personas.get(position).getDescripcion());
         i.putExtra("posicion",position);
         startActivity(i);
+    }
+
+    @Override protected void onResume() {
+        super.onResume();
     }
 }

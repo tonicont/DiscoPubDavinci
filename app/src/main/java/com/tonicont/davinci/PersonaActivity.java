@@ -53,8 +53,11 @@ public class PersonaActivity extends Activity {
          btn_atras.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View view) {
+                 finish();
+                 /*
                  Intent i = new Intent(PersonaActivity.this,MainActivity.class);
                  startActivity(i);
+                 */
              }
          });
 
@@ -107,6 +110,10 @@ public class PersonaActivity extends Activity {
                 }
             });
         }
+    }
+
+    @Override protected void onResume() {
+        super.onResume();
     }
 
 }

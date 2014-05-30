@@ -26,6 +26,7 @@ import com.google.android.gms.gcm.GoogleCloudMessaging;
 
 import org.apache.http.NameValuePair;
 import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
@@ -113,16 +114,19 @@ public class MainActivity extends Activity implements View.OnClickListener {
     public void onClick(View view) {
         switch(view.getId()){
             case R.id.btn_fiestas:{
+
                 Intent i = new Intent(this,Fiestas2Activity.class);
                 startActivity(i);
                 break;
             }
             case R.id.btn_gente:{
+
                 Intent i = new Intent(this,GenteActivity.class);
                 startActivity(i);
                 break;
             }
             case R.id.btn_localizacion:{
+
                 Intent i = new Intent(this,LocalizacionActivity.class);
                 startActivity(i);
                 break;
@@ -230,6 +234,8 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 // If there is an error, don't just keep trying to register.
                 // Require the user to click a button again, or perform
                 // exponential back-off.
+            } catch (JSONException e) {
+                e.printStackTrace();
             }
             return msg;
         }
@@ -244,7 +250,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
      * device sends upstream messages to a server that echoes back the message
      * using the 'from' address in the message.
      */
-    private void sendRegistrationIdToBackend() {
+    private void sendRegistrationIdToBackend() throws JSONException {
         // Your implementation here.
         // Building Parameters
         List<NameValuePair> params = new ArrayList<NameValuePair>();
@@ -252,6 +258,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         // getting JSON Object
         // Note that create product url accepts POST method
         JSONObject json = jsonParser.makeHttpRequest("http://davinci.hostinazo.com/davinci/androidControl.php?accion=1", "POST", params);
+        Log.i(TAG,"Resultado de registro de dispositivo " + json.getString("result"));
     }
 
     /**

@@ -50,8 +50,11 @@ public class FiestaActivity extends Activity {
         btn_atras.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                finish();
+                /*
                 Intent i = new Intent(FiestaActivity.this,Fiestas2Activity.class);
                 startActivity(i);
+                */
             }
         });
     }
@@ -102,6 +105,10 @@ public class FiestaActivity extends Activity {
                 }
             });
         }
+    }
+
+    @Override protected void onResume() {
+        super.onResume();
     }
 
 }

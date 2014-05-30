@@ -51,8 +51,11 @@ public class Fiestas2Activity extends ListActivity implements View.OnClickListen
     public void onClick(View view) {
         switch(view.getId()){
             case R.id.btn_atras:{
+                finish();
+                /*
                 Intent i = new Intent(this,MainActivity.class);
                 startActivity(i);
+                */
             }
         }
     }
@@ -162,5 +165,9 @@ public class Fiestas2Activity extends ListActivity implements View.OnClickListen
         Date fecha = fiestas.get(position).getFecha();
         i.putExtra("fecha",formateador.format(fecha));
         startActivity(i);
+    }
+
+    @Override protected void onResume() {
+        super.onResume();
     }
 }

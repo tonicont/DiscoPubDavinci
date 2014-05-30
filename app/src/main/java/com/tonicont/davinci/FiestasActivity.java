@@ -44,8 +44,11 @@ public class FiestasActivity extends Activity implements View.OnClickListener {
     public void onClick(View view) {
         switch(view.getId()){
             case R.id.btn_atras:{
+                finish();
+                /*
                 Intent i = new Intent(this,MainActivity.class);
                 startActivity(i);
+                */
             }
         }
     }
@@ -223,5 +226,9 @@ public class FiestasActivity extends Activity implements View.OnClickListener {
             });
         }
 
+    }
+
+    @Override protected void onResume() {
+        super.onResume();
     }
 }

@@ -81,7 +81,8 @@ public class GcmIntentService extends IntentService {
                 this.getSystemService(Context.NOTIFICATION_SERVICE);
 
         PendingIntent contentIntent = PendingIntent.getActivity(this, 0,
-                new Intent(this, Fiestas2Activity.class), 0);
+                new Intent(this, MainActivity.class), 0);
+
 
         NotificationCompat.Builder mBuilder =
                 new NotificationCompat.Builder(this)

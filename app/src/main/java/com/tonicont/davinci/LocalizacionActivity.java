@@ -37,8 +37,11 @@ public class LocalizacionActivity extends Activity implements View.OnClickListen
     public void onClick(View view) {
         switch(view.getId()){
             case R.id.btn_atras:{
+                finish();
+                /*
                 Intent i = new Intent(this,MainActivity.class);
                 startActivity(i);
+                */
             }
         }
     }
